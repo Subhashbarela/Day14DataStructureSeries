@@ -16,9 +16,10 @@ namespace LinkedListSeries
            list.AddLast(30);
             list.AddLast(70);
             list.display();
-
-            list.DeleteFirstElement();
-            list.display();
+            Console.WriteLine("\n......................");
+            
+            list.FindElement(56);
+           
             Console.Read();
         }
     }

@@ -46,27 +46,40 @@ namespace LinkedListSeries
                 temp = temp.next;
             }
         }
-        internal void DeleteFirstElement()
+        internal void FindElement(int search)
         {
-            //Node delete = new Node(head);
-            if(this.head==null)
+            Node SearchElem = new Node(search);
+            SearchElem = this.head;
+            int found = 0;
+            int i = - 0;
+            if (SearchElem != null)
             {
+                while(SearchElem != null)
+                {
+                   
+                    if(SearchElem.data == search)
+                    {
+                        i++;
+                        found++;
+                        break;
+                    }
+                    SearchElem = SearchElem.next;
+                }
+                if(found == 1)
+                {
 
-                Console.WriteLine("linked list is empty ");
+                    Console.WriteLine(search + " is found at position = " + i + ".");
+                }
+                else
+                {
+                    Console.WriteLine(search + " is not found in the list ");
+                }
+
             }
-            if(head.next == null)
+            else
             {
-                head = null;
-
+                Console.WriteLine("the list is empty :");
             }
-            Node last= head;
-           // Node SecondLast=head
-            while (last.next.next != null) {
-               last= last.next;
-            }
-            last.next= null;
-
-
 
 
            
