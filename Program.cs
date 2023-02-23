@@ -13,11 +13,11 @@ namespace LinkedListSeries
             LinkedList list = new LinkedList();
             
             list.AddLast(56);
-           // list.AddLast(last1);
+           list.AddLast(30);
             list.AddLast(70);
             list.display();
 
-            list.InterAtPosition(2, 30);
+            list.DeleteFirstElement();
             list.display();
             Console.Read();
         }
