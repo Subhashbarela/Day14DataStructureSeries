@@ -17,7 +17,7 @@ namespace LinkedListSeries
             if (this.head == null)
             {
                 this.head = LastNode;
-                // Console.WriteLine("list is empty ;");
+
             }
             else
             {
@@ -28,7 +28,7 @@ namespace LinkedListSeries
                 }
                 temp.next = LastNode;
             }
-         //   Console.WriteLine("{0} inserted into linklist :", LastNode.data);
+            Console.WriteLine("{0} inserted into linklist :", LastNode.data);
         }
 
         internal void display()
@@ -45,6 +45,41 @@ namespace LinkedListSeries
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        internal int InterAtPosition(int pos, int data)
+        {
+            Node newNode = new Node(data);
+            newNode.data = data;
+            newNode.next = null;
+
+            if (pos < 1)
+            {
+                Console.WriteLine("position should be >=1");
+
+            }
+            else if (pos == 1)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+                Node temp = new Node(data);
+                temp = head;
+                for (int i = 0; i < pos - 1; i++)
+                {
+                    if (temp != null)
+                    {
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                    }
+                    else
+                    {
+                        Console.WriteLine("previous node is null ");
+                    }
+                }
+
+            }return 0;
         }
     }
 }
