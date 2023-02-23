@@ -49,12 +49,24 @@ namespace LinkedListSeries
         internal void DeleteFirstElement()
         {
             //Node delete = new Node(head);
-            if(this.head !=null)
+            if(this.head==null)
             {
-                Node temp = this.head;
-                this.head=this.head.next;
-                temp = null;
+
+                Console.WriteLine("linked list is empty ");
             }
+            if(head.next == null)
+            {
+                head = null;
+
+            }
+            Node last= head;
+           // Node SecondLast=head
+            while (last.next.next != null) {
+               last= last.next;
+            }
+            last.next= null;
+
+
 
 
            
