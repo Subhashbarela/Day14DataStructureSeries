@@ -17,9 +17,12 @@ namespace LinkedListOperation
 
             list.Print();
             list.InsertAfter(30,40);
-
-           // list.Delete(70);
             list.Print();
+            list.Delete(40);
+            list.Print();
+
+            // list.Delete(70);
+           
 
 
         }
