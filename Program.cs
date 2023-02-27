@@ -15,11 +15,12 @@ namespace LinkedListOperation
             list.Add(30);
             list.Add(70);
 
-            list.Print();
+            //list.Print();
             list.InsertAfter(30,40);
             list.Print();
-            list.Delete(40);
-            list.Print();
+           // list.Delete(40);
+           int size=list.GetSize();
+          Console.WriteLine(size);
 
             // list.Delete(70);
            

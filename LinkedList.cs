@@ -89,6 +89,17 @@ namespace LinkedListOperation
                 current.Next = current.Next.Next;
             }
         }
+        public int GetSize()
+        {
+            int count = 0;
+            Node current = Head;
+            while (current != null)
+            {
+                count++;
+                current = current.Next;
+            }
+            return count;
+        }
 
 
     }
